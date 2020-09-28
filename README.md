@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ### Simple Login And Signup System Using PHP PDO
 
@@ -19,3 +20,7 @@ Inside of the Db.php file, the following line is where you can change the databa
 ```
 
 After this, you can view the application in your broswer.
+=======
+# dinamicas-blandas
+Proyecto web para compartir performance artístico, nombrado "Dinámicas Blandas"
+>>>>>>> 823ea3bbe8ed4b623451b07ab9b9a6ddcd1a5876
