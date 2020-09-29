@@ -42,6 +42,11 @@
         <?php endif; ?>
         <?php if (isset($_SESSION['auth_status'])) : ?>
           <li class="nav-item">
+            <a href="<?php echo BASE_URL; ?>programacion.php" class="nav-link <?php if (strtolower($active) === 'programacion') echo 'active'; ?>">programación</a>
+          </li>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['auth_status'])) : ?>
+          <li class="nav-item">
             <a class="nav-link" href="<?php echo BASE_URL; ?>logout.php">logout</a>
           </li>
         <?php endif; ?>
