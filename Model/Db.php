@@ -22,11 +22,11 @@
       );
       try {
         $this->dbHandler = new PDO($Dsn, $this->dbUser, $this->dbPass, $Options);
-      } catch (Exception $e) {
+      } 
+      catch (Exception $e) {
         var_dump('Couldn\'t Establish A Database Connection. Due to the following reason: ' . $e->getMessage());
       }
     }
-
 
     /**
       * @param string
@@ -66,7 +66,6 @@
       $this->dbStmt->bindValue($param, $value, $type);
     }
 
-
     /**
       * @param null|void
       * @return null|void
@@ -74,7 +73,6 @@
     **/
     public function execute()
     {
-      //echo 'R+J: ' . $this->dbStmt;
       $this->dbStmt->execute();
       return true;
     }

@@ -13,6 +13,9 @@
 		<link rel="stylesheet" href="assets/css/mainadmon.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+
 		<!-- Script -->
 		<script src="./assets/js/jquery.js" charset="utf-8"></script>
     <script src="./assets/js/bootstrap.min.js" charset="utf-8"></script>
