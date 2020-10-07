@@ -10,55 +10,54 @@
 		<!-- Css Styles... -->
 		<link rel="stylesheet" href="./assets/css/bootstrap.min.db.css">
 
-		<link rel="stylesheet" href="assets/css/mainadmon.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
 
 		<!-- Script -->
 		<script src="./assets/js/jquery.js" charset="utf-8"></script>
     <script src="./assets/js/bootstrap.min.js" charset="utf-8"></script>
-    
-	</head>
+
+    <!-- Script 
+    <script src="./assets/js/lienzoadm.js"></script> -->
+
+</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header y Menu -->
-				<?php include('./includes/headermenu.php'); ?>
+    <?php
+      $usuarios = new Users();
+      $Response = [];
+      $active = $usuarios->active;
+    ?>
 
-<?php
-  $Users = new Users();
-  $Response = [];
-  $active = $Users->active;
-  $News = $Users->getNews();
-?>
-<?php require('./navLogin.php'); ?>
-<main role="main" class="container">
-  <div class="container">
-    <div class="row mt-5">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
-        <h2>administración de usuarios</h2>
-        <hr>
-      </div>
-    </div>
-    <!--
-    <div class="row">
-      <?php if ($News['status']) : ?>
-        <?php foreach ($News['data'] as $new) :  ?>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-xl-4 col-lg-4">
-            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-              <div class="news_title">
-                <h3><?php echo ucwords($new['title']); ?></h3>
-              </div>
-              <div class="news_body">
-                <p><?php echo $new['content']; ?> <a href="javascript:void(0)">Read More</a></p>
+    <main role="main">
+
+      <?php require('./navLogin.php'); ?>
+      <br>
+      
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
+            <h2>Usuarios</h2>
+            <div id='status' name='status' class="row"></div>
+            <div class="row">
+              <div class="col">
+                <div class="card mt-3">
+                  <div class="card-title ml-3 my-3">
+                    <!-- Add Button--> 
+                    <button type="button" class="btn btn-primary" id="btn_add">Crear Usuario</button>
+                  </div>
+                  <div class="card-body">
+                    <div id="table"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        <?php endforeach; ?>
-      <?php endif;  ?>
-    </div>
-    -->
-  </div>
-</main>
-
-<?php include('./includes/footer.php'); ?>
+        </div>
+      </div>
+    </main>
+	</body>
+</html>

@@ -1,4 +1,4 @@
-<?php require_once('./controller/LienzoAdm.php'); ?>
+<?php require_once('./controller/ConTexto.php'); ?>
 
 <!DOCTYPE HTML>
 <html>
@@ -20,7 +20,7 @@
 		<script src="./assets/js/jquery.js" charset="utf-8"></script>
     <script src="./assets/js/bootstrap.min.js" charset="utf-8"></script>
 
-    <script src="./assets/js/lienzoadm.js"></script>
+    <script src="./assets/js/contexto.js"></script>
 
 </head>
 	<body class="is-preload">
@@ -31,9 +31,9 @@
 				<?php include('./includes/headermenu.php'); ?>
 
     <?php
-      $lienzoadm = new LienzoAdm();
+      $conTexto = new ConTexto();
       $Response = [];
-      $active = $lienzoadm->active;
+      $active = $conTexto->active;
     ?>
     <?php require('./navLogin.php'); ?>
 
@@ -41,28 +41,45 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
-            <h2>Administración de Lienzos</h2>
+            <h2>Administración de Textos</h2>
             <div id='status' name='status' class="row"></div>
             <div class="row">
               <div class="col">
                 <div class="card mt-3">
                   <div class="card-title ml-3 my-3">
-                    <!--Registration Button--> 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Registration">Crear Lienzo</button>
+                    <!-- Add Button--> 
+                    <button type="button" class="btn btn-primary" id="btn_add">Crear Texto</button>
                   </div>
                   <div class="card-body">
-                    <div id="table"></div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th class="text-center">Id</td>
+                          <th>Nombre</td>
+                          <th>Texto</td>
+                          <th class="text-center">Top</td>
+                          <th class="text-center">Left</td>
+                          <th class="text-center">Height</td>
+                          <th class="text-center">Width</td>
+                          <th class="text-center">Estatus</td>
+                          <th class="text-center">Created at</td>
+                          <th class="text-center"> Edit </td>
+                          <th class="text-center"> Delete </td>
+                        </tr>
+                      </thead>
+                      <tbody id="table"></tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!--Registration Modal-->
-            <div class="modal" id="Registration">
+            <!--Add Modal-->
+            <div class="modal fade" id="add_modal" tabindex="-1" aria-labelledby="lbl_add_modal" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h3 class="text-dark">Crear Lienzo</h3>
+                    <h3 class="modal-title"  id="lbl_add_modal">Crear Texto</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -70,8 +87,17 @@
                   <div class="modal-body">
                     <div id="message"></div>
                     <form>
-                      <input type="text" class="form-control my-2" placeholder="User Name" id="UserName">
-                      <input type="email" class="form-control my-2" placeholder="User Email" id="UserEmail">
+                      <input type="text" class="form-control my-2" placeholder="Nombre Texto" id="nombre">
+                      <textarea class="form-control" placeholder="Texto" id="texto" rows=10></textarea>
+                      <input type="number" class="form-control my-2" placeholder="Top" id="ntop">
+                      <input type="number" class="form-control my-2" placeholder="Left" id="nleft">
+                      <input type="number" class="form-control my-2" placeholder="Height" id="nheight">
+                      <input type="number" class="form-control my-2" placeholder="Width" id="nwidth">
+                      <select id="status_id" class="form-control my-2">
+                        <option value=0 selected>Seleccione estatus...</option>
+                        <option value=1>Activo</option>
+                        <option value=2>Inactivo</option>
+                      </select>
                     </form>
                   </div>
                   <div class="modal-footer">
@@ -95,9 +121,18 @@
                   <div class="modal-body">
                     <div id="up-message"></div>
                     <form>
-                      <input type="hidden" class="form-control my-2" placeholder="User Email" id="Up_User_ID">
-                      <input type="text" class="form-control my-2" placeholder="User Name" id="Up_UserName">
-                      <input type="email" class="form-control my-2" placeholder="User Email" id="Up_UserEmail">
+                      <input type="hidden" class="form-control my-2" placeholder="Id" id="up_id">
+                      <input type="text" class="form-control my-2" placeholder="Nombre Texto" id="up_nombre">
+                      <textarea class="form-control" placeholder="Texto" id="up_texto" rows=10></textarea>
+                      <input type="number" class="form-control my-2" placeholder="Top" id="up_ntop">
+                      <input type="number" class="form-control my-2" placeholder="Left" id="up_nleft">
+                      <input type="number" class="form-control my-2" placeholder="Height" id="up_nheight">
+                      <input type="number" class="form-control my-2" placeholder="Width" id="up_nwidth">
+                      <select id="up_status_id" class="form-control my-2">
+                        <option value=0 selected>Seleccione estatus...</option>
+                        <option value=1>Activo</option>
+                        <option value=2>Inactivo</option>
+                      </select>
                     </form>
                   </div>
                   <div class="modal-footer">
@@ -113,7 +148,7 @@
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <p> ¿Quieres eliminar este registro?</p>
+                    <p> ¿Quieres eliminar este texto?</p>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
