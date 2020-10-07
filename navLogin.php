@@ -33,7 +33,7 @@
         <?php endif; ?>
         <?php if (isset($_SESSION['auth_status'])) : ?>
           <li class="nav-item">
-            <a href="<?php echo BASE_URL; ?>actores.php" class="nav-link <?php if (strtolower($active) === 'contenido') echo 'active'; ?>">actores</a>
+            <a href="<?php echo BASE_URL; ?>actores.php" class="nav-link <?php if (strtolower($active) === 'actores') echo 'active'; ?>">actores</a>
           </li>
         <?php endif; ?>
         <?php if (isset($_SESSION['auth_status'])) : ?>
