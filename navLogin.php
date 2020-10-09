@@ -38,7 +38,7 @@
         <?php endif; ?>
         <?php if (isset($_SESSION['auth_status'])) : ?>
           <li class="nav-item">
-            <a href="<?php echo BASE_URL; ?>escenarios.php" class="nav-link <?php if (strtolower($active) === 'programacion') echo 'active'; ?>">escenarios</a>
+            <a href="<?php echo BASE_URL; ?>escenas.php" class="nav-link <?php if (strtolower($active) === 'escenas') echo 'active'; ?>">escenas</a>
           </li>
         <?php endif; ?>
         <?php if (isset($_SESSION['auth_status'])) : ?>

@@ -87,31 +87,6 @@
                           <small id='hlpNombreNOK' class="no_valido" style='color:red;'>y mi nombre? :(</small>
                         </div>
                       </div>
-
-                      <!--
-                      <div class="form-group row">
-                        <label for="posicion_x" class="col-sm-2 col-form-label">Posición</label>
-                        <div class="col-sm-4">
-                          <div class="input-group mb-2">
-                            <input type="number" class="form-control" id="posicion_x">
-                            <div class="input-group-append">
-                              <div class="input-group-text">px X</div>
-                            </div>
-                          </div>
-                          <small id="hlpXNOK" class="no_valido" style='color:red;'>... y mi x? :(</small>
-                        </div>
-                        <div class="col-sm-4 offset-sm-1">
-                          <div class="input-group mb-2">
-                            <input type="number" class="form-control" id="posicion_y">
-                            <div class="input-group-append">
-                              <div class="input-group-text">px Y</div>
-                            </div>
-                          </div>
-                          <small id="hlpYNOK" class="no_valido" style='color:red;'>... y mi y? :(</small>
-                        </div>
-                      </div>
-                      -->
-    
                       <div class="form-group row">
                         <label for="id_tipo" class="col-sm-2 col-form-label">Tipo</label>
                         <div class="col-sm-4">
@@ -126,7 +101,7 @@
                           </select>
                           <small id="hlpTipoNOK" class="no_valido" style='color:red;'>... tampoco mi tipo! :(</small>
                         </div>
-                        <label for="id_status" class="col-sm-1 col-form-label">Estatus</label>
+                        <label for="id_status" class="col-sm-1 offset-sm-1 col-form-label">Estatus</label>
                         <div class="col-sm-4">
                           <select id="id_status" class="form-control">
                             <option value=0 selected>Seleccione estatus...</option>
@@ -167,7 +142,7 @@
                         </div>
                         <div class="form-group row">
                           <label for="p_contenido" class="col-sm-2 col-form-label" style='color:darkblue;'>Contenido</label>
-                          <div class="col-sm-6">
+                          <div class="col-sm-10">
                             <div class="input-group mb-2">
                               <input type="text" class="form-control" id="p_contenido">
                             </div>
@@ -188,7 +163,7 @@
                             </div>
                             <small id="hlpRTamanoXNOK" class="no_valido" style='color:red;'>... y mi x? :(</small>
                           </div>
-                          <div class="col-sm-4 offset-sm-1">
+                          <div class="col-sm-4 offset-sm-2">
                             <div class="input-group mb-2">
                               <input type="number" class="form-control" id="r_tamano_y">
                               <div class="input-group-append">
@@ -208,7 +183,7 @@
                         </div>
                         <div class="form-group row">
                           <label for="r_contenido" class="col-sm-2 col-form-label" style='color:darkblue;'>Contenido</label>
-                          <div class="col-sm-6">
+                          <div class="col-sm-10">
                             <div class="input-group mb-2">
                               <input type="text" class="form-control" id="r_contenido">
                             </div>

@@ -106,8 +106,8 @@
           <div class="row">
 
             <div class="col-sm-12 mb-3">
-              <input type="text" id="id_temporada">
-              <input type="text" id="accion">
+              <input type="text" id="id_temporada" disabled>
+              <input type="text" id="accion" disabled>
               <button type="button" class="btn btn-primary" id="btn_register">Guardar</button>
               <button type="button" class="btn btn-secondary" id="btn_close">Cancelar</button>
             </div>

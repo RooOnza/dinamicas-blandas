@@ -108,7 +108,7 @@
       if ($this->execute()) {
         $Response = array(
           'status' => true,
-          'mensaje' => 'Vale!, escena creada.'
+          'mensaje' => 'Vale!, escena asignada.'
         );
       } else {
         $Response = array(

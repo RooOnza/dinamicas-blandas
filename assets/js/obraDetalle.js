@@ -31,8 +31,8 @@ function estadoInicial(){
 
     getListaEscenas(0);
 
-    $("#id_estatus").change(function() {  
-        estadoAddEscena($("#id_estatus").val());
+    $("#id_status").change(function() {  
+        estadoAddEscena($("#id_status").val());
     });  
 
     $(document).on('click', '#btn_register', function() {

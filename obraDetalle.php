@@ -78,7 +78,7 @@
   
             <div class="col-sm-12 my-3">
               <!-- Add Button--> 
-              <button type="button" class="btn btn-primary escenas" id="btn_add">Crear Escena</button>
+              <button type="button" class="btn btn-primary escenas" id="btn_add">Asignar Escena</button>
             </div>
             <br>
             <div class="col-sm-12">
@@ -100,8 +100,8 @@
           <div class="row">
 
             <div class="col-sm-12 mb-3">
-              <input type="text" id="id_obra">
-              <input type="text" id="accion">
+              <input type="text" id="id_obra" disabled>
+              <input type="text" id="accion" disabled>
               <button type="button" class="btn btn-primary" id="btn_register">Guardar</button>
               <button type="button" class="btn btn-secondary" id="btn_close">Cancelar</button>
             </div>
@@ -123,7 +123,7 @@
                 <div class="modal-body">
                   <div id="message"></div>
                   <form id="form_detalle">
-                  <div class="form-group row">
+                    <div class="form-group row">
                       <label for="id_escena" class="col-sm-2 col-form-label">Escena</label>
                       <div class="col-sm-10">
                         <select id="id_escena" class="form-control"></select>
@@ -131,7 +131,7 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="id_status" class="col-sm-2 col-form-label">Orden</label>
+                      <label for="orden" class="col-sm-2 col-form-label">Orden</label>
                       <div class="col-sm-10">
                         <input type="number" class="form-control" id="orden" required>
                         <small id="hlpOrdenNOK" class="no_valido" style='color:red;'>wey mi orden! :(</small>
