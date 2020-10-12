@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-10-2020 a las 16:54:08
+-- Tiempo de generación: 09-10-2020 a las 18:42:17
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `db_actores` (
   `id_actor` int(11) NOT NULL,
-  `nombre` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `desc_actor` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
   `posicion_x` int(11) NOT NULL,
   `posicion_y` int(11) NOT NULL,
   `estilo` varchar(200) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
@@ -42,11 +42,11 @@ CREATE TABLE `db_actores` (
 -- Volcado de datos para la tabla `db_actores`
 --
 
-INSERT INTO `db_actores` (`id_actor`, `nombre`, `posicion_x`, `posicion_y`, `estilo`, `id_tipo`, `id_status`, `created_at`) VALUES
-(1, 'Punto A', 400, 400, '', 1, 1, '2020-10-02 01:02:45'),
+INSERT INTO `db_actores` (`id_actor`, `desc_actor`, `posicion_x`, `posicion_y`, `estilo`, `id_tipo`, `id_status`, `created_at`) VALUES
+(1, 'Punto A', 0, 0, '', 1, 2, '2020-10-02 01:02:45'),
 (2, 'Punto B', 700, 700, '', 1, 1, '2020-10-02 01:02:45'),
-(3, 'Rectángulo A', 300, 400, '', 1, 1, '2020-10-02 01:12:52'),
-(4, 'Rectángulo B', 800, 700, '', 1, 1, '2020-10-02 01:12:52');
+(3, 'Rectángulo A', 300, 400, '', 2, 1, '2020-10-02 01:12:52'),
+(4, 'Rectángulo B', 800, 700, '', 2, 1, '2020-10-02 01:12:52');
 
 -- --------------------------------------------------------
 
@@ -57,8 +57,8 @@ INSERT INTO `db_actores` (`id_actor`, `nombre`, `posicion_x`, `posicion_y`, `est
 CREATE TABLE `db_canvas` (
   `id_canvas` int(11) NOT NULL,
   `desc_canvas` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `tamaño_x` int(11) NOT NULL,
-  `tamaño_y` int(11) NOT NULL,
+  `tamano_x` int(11) NOT NULL,
+  `tamano_y` int(11) NOT NULL,
   `color` varchar(20) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `estilo` varchar(200) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `id_status` int(11) NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE `db_canvas` (
 -- Volcado de datos para la tabla `db_canvas`
 --
 
-INSERT INTO `db_canvas` (`id_canvas`, `desc_canvas`, `tamaño_x`, `tamaño_y`, `color`, `estilo`, `id_status`, `created_at`) VALUES
+INSERT INTO `db_canvas` (`id_canvas`, `desc_canvas`, `tamano_x`, `tamano_y`, `color`, `estilo`, `id_status`, `created_at`) VALUES
 (1, 'Lienzo pequeño A (1000x800)', 1000, 800, 'white', '', 1, '2020-10-02 01:50:02'),
 (2, 'Lienzo muy pequeño A (700x600)', 700, 600, 'black', '', 1, '2020-10-02 01:50:02');
 
@@ -94,8 +94,9 @@ CREATE TABLE `db_escenas` (
 --
 
 INSERT INTO `db_escenas` (`id_escena`, `desc_escena`, `tiempo`, `id_canvas`, `id_tipo`, `id_status`, `created_at`) VALUES
-(1, 'Escena A', 2, 1, 1, 1, '2020-10-02 02:20:03'),
-(2, 'Escena B', 1, 2, 1, 1, '2020-10-02 02:20:03');
+(1, 'Escena A', 12, 1, 1, 1, '2020-10-02 02:20:03'),
+(2, 'Escena B', 1, 2, 1, 1, '2020-10-02 02:20:03'),
+(3, 'nombre de escena patito', 22, 1, 2, 1, '2020-10-08 19:51:45');
 
 -- --------------------------------------------------------
 
@@ -132,6 +133,7 @@ CREATE TABLE `db_escena_actores` (
   `tiempo_ini` int(11) DEFAULT NULL,
   `tiempo_fin` int(11) DEFAULT NULL,
   `estilo` varchar(200) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `orden` int(11) NOT NULL,
   `id_status` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
@@ -140,10 +142,12 @@ CREATE TABLE `db_escena_actores` (
 -- Volcado de datos para la tabla `db_escena_actores`
 --
 
-INSERT INTO `db_escena_actores` (`id_escena`, `id_actor`, `posicion_x`, `posicion_y`, `permanente`, `tiempo_ini`, `tiempo_fin`, `estilo`, `id_status`, `created_at`) VALUES
-(1, 1, 200, 100, 1, 0, 0, '', 1, '2020-10-02 02:39:46'),
-(1, 2, 400, 100, 1, 0, 0, '', 1, '2020-10-02 02:39:46'),
-(1, 3, 300, 300, 1, 0, 0, '', 1, '2020-10-02 02:39:46');
+INSERT INTO `db_escena_actores` (`id_escena`, `id_actor`, `posicion_x`, `posicion_y`, `permanente`, `tiempo_ini`, `tiempo_fin`, `estilo`, `orden`, `id_status`, `created_at`) VALUES
+(1, 1, 200, 100, 1, 0, 0, '', 0, 1, '2020-10-02 02:39:46'),
+(1, 2, 401, 202, 0, 3, 6, 'sin estilo :)', 3, 1, '2020-10-02 02:39:46'),
+(1, 3, 300, 300, 1, 0, 0, '', 4, 1, '2020-10-02 02:39:46'),
+(1, 2, 600, 402, 0, 7, 10, '', 5, 1, '2020-10-09 00:30:53'),
+(3, 2, 200, 200, 0, 2, 3, '', 2, 1, '2020-10-09 06:31:46');
 
 -- --------------------------------------------------------
 
@@ -178,10 +182,7 @@ CREATE TABLE `db_lienzos` (
 --
 
 INSERT INTO `db_lienzos` (`id`, `nombre`, `ancho`, `alto`, `status_id`, `created_at`) VALUES
-(1, 'Lienzo default (600px x 500px)', 600, 500, 1, '2020-09-28 18:52:26'),
-(18, 'Lienzo con ligero desborde', 2000, 1600, 2, '2020-09-30 21:09:01'),
-(19, 'Otro lienzo', 3000, 2000, 3, '2020-09-30 21:09:27'),
-(22, 'pruebas 3', 3, 3, 2, '2020-09-30 21:10:28');
+(1, 'Lienzo default (600px x 500px)', 600, 500, 1, '2020-09-28 18:52:26');
 
 -- --------------------------------------------------------
 
@@ -279,8 +280,8 @@ INSERT INTO `db_puntos` (`id_actor`, `diametro`, `color`, `contenido`) VALUES
 
 CREATE TABLE `db_rectangulos` (
   `id_actor` int(11) NOT NULL,
-  `tamaño_x` int(11) NOT NULL,
-  `tamaño_y` int(11) NOT NULL,
+  `tamano_x` int(11) NOT NULL,
+  `tamano_y` int(11) NOT NULL,
   `color` varchar(20) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `contenido` varchar(200) COLLATE utf8mb4_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
@@ -289,7 +290,7 @@ CREATE TABLE `db_rectangulos` (
 -- Volcado de datos para la tabla `db_rectangulos`
 --
 
-INSERT INTO `db_rectangulos` (`id_actor`, `tamaño_x`, `tamaño_y`, `color`, `contenido`) VALUES
+INSERT INTO `db_rectangulos` (`id_actor`, `tamano_x`, `tamano_y`, `color`, `contenido`) VALUES
 (3, 100, 50, 'gray', ''),
 (4, 80, 120, 'green', '');
 
@@ -678,13 +679,13 @@ ALTER TABLE `db_canvas`
 -- AUTO_INCREMENT de la tabla `db_escenas`
 --
 ALTER TABLE `db_escenas`
-  MODIFY `id_escena` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_escena` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `db_lienzos`
 --
 ALTER TABLE `db_lienzos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `db_lienzo_status`
@@ -708,7 +709,7 @@ ALTER TABLE `db_obras`
 -- AUTO_INCREMENT de la tabla `db_status`
 --
 ALTER TABLE `db_status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `db_temporadas`

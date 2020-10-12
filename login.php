@@ -28,12 +28,12 @@
 				<!-- Header y Menu -->
 				<?php include('./includes/headermenu.php'); ?>
 
-<?php
-  $Login = new Login();
-  $Response = [];
-  $active = $Login->active;
-  if (isset($_POST) && count($_POST) > 0) $Response = $Login->login($_POST);
-?>
+  <?php
+    $Login = new Login();
+    $Response = [];
+    $active = $Login->active;
+    if (isset($_POST) && count($_POST) > 0) $Response = $Login->login($_POST);
+  ?>
   <?php require('./navLogin.php'); ?>
     <main role="main" class="container">
       <div class="container">
@@ -72,4 +72,12 @@
       </div>
     </main>
 
-<?php include('./includes/footer.php'); ?>
+		<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

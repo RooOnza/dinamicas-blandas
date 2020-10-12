@@ -13,8 +13,11 @@
     **/
     public function __construct()
     {
-      if (isset($_SESSION['auth_status'])) header("Location: dashboard.php");
-      $this->registerModel = new RegisterModel();
+      if (isset($_SESSION['auth_status'])) 
+        if ($_SESSION['auth_status']) 
+          header("Location: users.php");
+
+        $this->registerModel = new RegisterModel();
     }
 
     /**
@@ -70,7 +73,12 @@
 
       $_SESSION['data'] = $Data;
       $_SESSION['auth_status'] = true;
-      header("Location: dashboard.php");
+      //header("Location: users.php");
+      
+      echo '<script type="text/javascript">
+              window.location.assign("users.php");
+            </script>';
+      
       return true;
     }
   }

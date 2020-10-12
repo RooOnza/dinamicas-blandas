@@ -14,7 +14,10 @@ class Login extends Controller {
   **/
   public function __construct()
   {
-    if (isset($_SESSION['auth_status'])) header("Location: users.php");
+    if (isset($_SESSION['auth_status'])) 
+      if ($_SESSION['auth_status']) 
+        header("Location: users.php");
+    
     $this->loginModel = new LoginModel();
   }
 
@@ -25,6 +28,8 @@ class Login extends Controller {
   **/
   public function login(array $data)
   {
+    $_SESSION['auth_status'] = false;
+
     $email = stripcslashes(strip_tags($data['email']));
     $password = stripcslashes(strip_tags($data['password']));
 
@@ -33,23 +38,27 @@ class Login extends Controller {
     if (!$EmailRecords['status']) {
       if (password_verify($password, $EmailRecords['data']['password'])) {
         //check if the remember_me was selected...
-        $Response = array(
-          'status' => true
-        );
+        $Response = array( 'status' => true );
 
         $_SESSION['data'] = $EmailRecords['data'];
         $_SESSION['auth_status'] = true;
-        header("Location: users.php");
+
+
+        //header("Location: users.php");
+
+        echo '<script type="text/javascript">
+                window.location.assign("users.php");
+              </script>';
       }
 
       $Response = array(
-        'status' => false,
+        'status' => false
       );
       return $Response;
     }
 
     $Response = array(
-      'status' => false,
+      'status' => false
     );
     return $Response;
   }
