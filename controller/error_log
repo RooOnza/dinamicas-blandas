@@ -1,0 +1,55 @@
+[09-Oct-2020 12:41:18 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 42
+[09-Oct-2020 13:29:09 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 42
+[09-Oct-2020 13:37:30 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 17
+[09-Oct-2020 13:37:45 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/users.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Users.php on line 16
+[09-Oct-2020 13:38:24 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 42
+[09-Oct-2020 13:39:06 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 42
+[09-Oct-2020 13:53:59 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 17
+[09-Oct-2020 13:54:12 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 17
+[09-Oct-2020 13:54:12 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 44
+[09-Oct-2020 13:59:28 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 44
+[09-Oct-2020 14:00:31 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 17
+[09-Oct-2020 14:00:31 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 44
+[09-Oct-2020 14:03:06 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 17
+[09-Oct-2020 14:03:06 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 44
+[09-Oct-2020 14:05:16 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 17
+[09-Oct-2020 14:05:16 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 44
+[09-Oct-2020 14:07:36 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 17
+[09-Oct-2020 14:07:36 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 44
+[09-Oct-2020 14:10:20 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 17
+[10-Oct-2020 15:10:13 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 47
+[10-Oct-2020 15:43:35 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 47
+[10-Oct-2020 15:44:25 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class 'Temporada' not found in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/lienzoAdmFunc.php:77
+Stack trace:
+#0 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/lienzoAdmFunc.php(10): getTable()
+#1 {main}
+  thrown in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/lienzoAdmFunc.php on line 77
+[10-Oct-2020 18:07:48 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY' in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/Model/Db.php:76
+Stack trace:
+#0 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/Model/Db.php(76): PDOStatement->execute()
+#1 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/Model/RegisterModel.php(17): Db->execute()
+#2 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Register.php(64): RegisterModel->createUser(Array)
+#3 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/register.php(32): Register->register(Array)
+#4 {main}
+  thrown in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/Model/Db.php on line 76
+[10-Oct-2020 18:08:16 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY' in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/Model/Db.php:76
+Stack trace:
+#0 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/Model/Db.php(76): PDOStatement->execute()
+#1 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/Model/RegisterModel.php(17): Db->execute()
+#2 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Register.php(64): RegisterModel->createUser(Array)
+#3 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/register.php(32): Register->register(Array)
+#4 {main}
+  thrown in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/Model/Db.php on line 76
+[10-Oct-2020 18:10:02 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 47
+[10-Oct-2020 18:11:13 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 19
+[10-Oct-2020 18:23:10 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/EscenasFunc.php on line 146
+[10-Oct-2020 18:28:09 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/EscenasFunc.php on line 146
+[10-Oct-2020 18:28:24 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/EscenasFunc.php on line 146
+[10-Oct-2020 18:39:31 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class 'Temporada' not found in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/lienzoAdmFunc.php:77
+Stack trace:
+#0 /home1/roberonz/lienzo-ro.com/dinamicas-blandas/lienzoAdmFunc.php(10): getTable()
+#1 {main}
+  thrown in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/lienzoAdmFunc.php on line 77
+[10-Oct-2020 20:57:56 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/temporada.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Temporada.php on line 17
+[10-Oct-2020 21:37:36 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 45
+[10-Oct-2020 21:40:29 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/roberonz/lienzo-ro.com/dinamicas-blandas/login.php:2) in /home1/roberonz/lienzo-ro.com/dinamicas-blandas/controller/Login.php on line 45
